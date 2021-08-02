@@ -4,21 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Starter Kit</title>
+    <title>image finder</title>
 
-    <!-- Don't forget to delete this style tag. -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
    
   </head>
 
   <body>
-  <h1 class="title">Введите название страны</h1>
 
-  <form class="js-form">
-<input class="value-form" name="query"/>
 
-  </form>
+<form class="search-form" id="search-form">
+  <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
+  <button type="submit" class="btn-submit">Искать</button>
+</form>
 
-  <ul class="js-render"></ul>
+
+<ul class="gallery">
+  <!-- Список <li> с карточками изображений -->
+</ul>
+<button type="button" data-set="load">
+
+  <span class="spinner-border spinner-border-sm spinner is-hidden" role="status" aria-hidden="true"></span>
+
+  <span class="label">Показать еще</span>
+</button>
 
   </body>
 </html>
