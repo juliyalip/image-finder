@@ -13,21 +13,32 @@
   <body>
 
 
-<form class="search-form" id="search-form">
-  <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
-  <button type="submit" class="btn-submit">Искать</button>
-</form>
+
+ <header class="search-bar">
+    <form class="search-form">
+      <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
+      <button type="submit" class="btn-submit" data-action="load-more">Искать</button>
+    </form>
+ </header>
+
+<main >
 
 
 <ul class="gallery">
   <!-- Список <li> с карточками изображений -->
 </ul>
-<button type="button" data-set="load">
-
-  <span class="spinner-border spinner-border-sm spinner is-hidden" role="status" aria-hidden="true"></span>
-
-  <span class="label">Показать еще</span>
+<button type="button" data-set="load" >
+<span class="label">Показать еще</span>
 </button>
+</main>
+
+
+  <!-- MOdal -->
+<div class="backDrop is-hidden">
+  <dav class="content ">
+
+  </dav>
+</div>
 
   </body>
 </html>
