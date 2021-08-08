@@ -15,6 +15,7 @@ backDrop.addEventListener('click', onClickBackDrop);
      backDrop.classList.remove('is-hidden')
     
      const imageEl = e.target;
+    
      imageEl.scr = e.target.dataset.sourse;
      imageEl.alt = e.target.alt;
      console.log(imageEl)
@@ -27,13 +28,14 @@ backDrop.addEventListener('click', onClickBackDrop);
 
 
 function onClickBackDrop(e) {
-    e.preventDefault()
-   
-    if (e.target !== e.currentTarget) {
-        return
-    }
+    e.preventDefault();
 
-    backDrop.classList.add('is-hidden');
+   if (e.target !== e.currentTarget) {
+        return
+    };
+
+      backDrop.classList.add('is-hidden');
+
   
 }
 

@@ -25,6 +25,7 @@ function onChangeInput (e){
     loadMoreBtn.show()
     apiService.query = e.currentTarget.elements.query.value;
     apiService.fetchPixabay().then(renderCard)
+    
 }
 
 loadMoreBtn.refs.button.addEventListener('click', onLoadMore )
@@ -35,6 +36,7 @@ function onLoadMore (e) {
     e.preventDefault();
     loadMoreBtn.disable
     apiService.fetchPixabay().then(renderCard)
+  
 }
 
 
@@ -50,4 +52,5 @@ function clearContainer() {
 
 ////////////////////////
 
-refs.gallery.addEventListener('click', onOpenModal )
+refs.gallery.addEventListener('click', onOpenModal)
+
