@@ -8,16 +8,24 @@ export default class ApiServise {
             this.page = 1
     }
     
-    fetchPixabay() {
-     return  fetch(`${BASE_URL}&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${key}`)
-            .then(response => response.json()).then(data => {
-             console.log(this);
-             console.log(data)
-             this.incrementPage();
-                return data.hits;
-         })
+
+   //  async fetchPixabay() {
+   //      const response = await fetch(`${BASE_URL}&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${key}`);
+   //      const respParse = await response.json();
+   //      this.incrementPage();
+   //      return respParse.hits
+   //  }
+
+          fetchPixabay() {
+        return  fetch(`${BASE_URL}&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${key}`)
+               .then(response => response.json()).then(data => {
+                console.log(this);
+                console.log(data)
+                this.incrementPage();
+                   return data.hits;
+            })
+           }
         
-        }
 
     get query() {
         return this.searchQuery
